@@ -1,0 +1,395 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Profile Section */
+.profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Profile Menu */
+.profile-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    width: 180px;
+    z-index: 10;
+    /* border: 1px solid black; */
+}
+
+.profile-menu div button {
+    color: #34495e;
+    width: 100%;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    /* border-bottom: 1px solid black; */
+}
+
+.profile-menu div button:last-child{
+    margin-bottom: 0;
+}
+
+.profile-menu div button:hover {
+    background-color: #bdc3c7;
+}
+
+/* Show Profile Menu */
+body .header .profile .active {
+    display: block;
+}
+
+/* Authentication Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.auth-box {
+    background-color: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #34495e;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-group select {
+    cursor: pointer;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2ecc71;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.auth-btn:hover {
+    background-color: #27ae60;
+}
+
+.auth-footer {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.auth-footer a {
+    color: #2ecc71;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #2c3e50;
+    color: white;
+    width: 250px;
+    height: 155vh;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header h1 {
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+.sidebar-nav ul {
+    list-style-type: none;
+    /* margin-top: 50px; */
+}
+
+.sidebar-nav ul li {
+    padding: 15px 0;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    padding-left: 30px;
+    font-size: 18px;
+    display: block;
+    cursor: pointer;
+}
+
+.sidebar-nav ul li:hover {
+    background-color: #34495e;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.dashboard-section {
+    margin-bottom: 40px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card h3 {
+    margin-bottom: 20px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.graph-placeholder,
+.table-placeholder,
+.report-placeholder,
+.timeline-placeholder {
+    background-color: #ecf0f1;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #95a5a6;
+}
+
+.task-logging form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr;
+}
+
+.task-logging label {
+    font-weight: bold;
+}
+
+.task-logging input,
+.task-logging textarea,
+.task-logging select,
+.task-logging button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.task-logging button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.task-logging button:hover {
+    background-color: #27ae60;
+}
+
+/* Task Timeline */
+.task-timeline {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Categorization */
+
+.task-categorization {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-categorization .categories {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-categorization .category {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    width: 30%;
+}
+
+/* Notifications */
+.notification-card {
+    background-color: #ecf0f1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content #notifications{
+    display: none;
+}
+
+
+/* Update section */
+.modal {
+    display: none;  /* Hidden by default */
+    position: fixed;  /* Fixed position on the screen */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 500px;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#profile-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#profile-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#profile-form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#profile-form button:hover {
+    background-color: #0056b3;
+}
+
+body button, a {
+    padding: 12px;
+    border-radius: 10px;
+}

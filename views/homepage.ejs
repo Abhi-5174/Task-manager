@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/donate/9/9b/Wfm-logo-white-circle.png"
+        type="image/x-icon">
+    <title>Employee Productivity Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .hero-section {
+            background-image: url('https://example.com/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .feature-card {
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+
+    <header class="header bg-transparent py-4 fixed w-full top-0 left-0 z-10 shadow-lg">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo Section -->
+            <div class="logo flex gap-2 items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/donate/9/9b/Wfm-logo-white-circle.png"
+                    alt="Company Logo" class="w-10 h-10 rounded-full">
+                <h1 class="logo-text text-2xl font-semibold text-black">EmpTrack</h1>
+            </div>
+
+            <!-- Login/signup Section -->
+            <div class="space-x-4">
+                <a href="/login"
+                    class="text-white bg-blue-600 px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300">Login</a>
+                <a href="/register"
+                    class="text-white bg-blue-600 px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300">Sign
+                    Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-gray-800 text-white text-center py-40 mt-16">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold mb-4">Empower Your Workforce with Our Productivity Tracker</h1>
+            <p class="text-xl mb-8">Track tasks, optimize time, and boost productivity with seamless, transparent tools
+                for both employees and employers.</p>
+            <a href="#features" class="bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-700">Explore
+                Features</a>
+        </div>
+    </section>
+
+    <!-- About the Product Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-10">About the Product</h2>
+            <p class="text-lg text-gray-700 mb-4">
+                The Employee Productivity Tracker is designed to help employees stay focused and managers stay informed.
+                Our tool allows employees to log tasks, track their work time, and get real-time feedback from
+                employers,
+                all while ensuring complete transparency in the workplace.
+            </p>
+            <p class="text-lg text-gray-700">
+                With this app, employees can track time, monitor progress, and keep a clear log of completed and pending
+                tasks,
+                all in one easy-to-use platform. Employers can access comprehensive productivity reports to improve team
+                performance.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-10">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Feature Card 1 -->
+                <div class="feature-card bg-blue-50 p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Task Logging</h3>
+                    <p class="text-gray-700">Effortlessly log daily tasks and categorize them for efficient tracking and
+                        visibility.</p>
+                </div>
+                <!-- Feature Card 2 -->
+                <div class="feature-card bg-blue-50 p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Time Tracking</h3>
+                    <p class="text-gray-700">Track the time spent on each task and get a detailed overview of your daily
+                        productivity.</p>
+                </div>
+                <!-- Feature Card 3 -->
+                <div class="feature-card bg-blue-50 p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Insights & Reports</h3>
+                    <p class="text-gray-700">Generate performance reports to identify trends, areas for improvement, and
+                        team productivity metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-10">What Our Users Say</h2>
+            <div class="flex flex-wrap justify-center space-x-4">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg w-1/3">
+                    <p class="text-lg text-gray-700 mb-4">“This tool has completely transformed how our team tracks
+                        their work. The transparency has improved accountability and overall productivity.”</p>
+                    <p class="font-semibold text-blue-600">John Doe, Project Manager</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg w-1/3">
+                    <p class="text-lg text-gray-700 mb-4">“As an employee, I love how easy it is to log my daily tasks
+                        and track my time. It's made me more focused and organized.”</p>
+                    <p class="font-semibold text-blue-600">Jane Smith, Software Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-10">Frequently Asked Questions</h2>
+            <div class="space-y-8">
+                <div class="text-left text-gray-700">
+                    <h3 class="text-2xl font-semibold">What is the Employee Productivity Tracker?</h3>
+                    <p>It is an application designed to help employees log and track their daily tasks while providing
+                        employers with insights into team productivity and progress.</p>
+                </div>
+                <div class="text-left text-gray-700">
+                    <h3 class="text-2xl font-semibold">How does time tracking work?</h3>
+                    <p>Employees can either log time manually or use the built-in timer to track the duration of each
+                        task in real-time.</p>
+                </div>
+                <div class="text-left text-gray-700">
+                    <h3 class="text-2xl font-semibold">Can employers view employee progress?</h3>
+                    <p>Yes, employers can access detailed reports showing task progress, completion rates, and time
+                        spent on each task.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p>&copy; 2025 Employee Productivity Tracker. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

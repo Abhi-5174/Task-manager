@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Productivity Tracker</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/donate/9/9b/Wfm-logo-white-circle.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+
+    <header class="header">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/donate/9/9b/Wfm-logo-white-circle.png" alt="Company Logo"
+                class="logo-img">
+            <h1 class="logo-text">EmpTrack</h1>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0="
+                alt="Profile Picture" class="profile-img" id="profile-icon">
+            <div class="profile-menu" id="profile-menu">
+                <ul>
+                    <div><button id="profile-btn">Profile</button></div>
+                    <div>
+                        <form action="/logout" method="get"><button type="submit">Logout</button></form>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Update Modal (Hidden by default) -->
+
+    <div class="modal" id="profile-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <h2 style="margin-bottom: 20px;">Update Your Profile</h2>
+            <form id="profile-form" action="/updateProfile" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="<%= user.name %>" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<%= user.email %>" required>
+
+                <label for="role">Role:</label>
+                <input type="text" id="role" name="role" value="<%= user.role %>" required>
+
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li id="dashboardBtn">Admin Dashboard</li>
+                    <li id="notificationsBtn">Notifications</li>
+                    <li>Setting</li>
+                    <li>Help</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Admin Dashboard Section -->
+            <section id="admin-dashboard" class="dashboard-section">
+                <div style="display: flex; justify-content: space-between; padding: 10px 5px 20px;">
+                    <h2>
+                        Welcome
+                        <%= user.name %>,
+                    </h2>
+                    <h2>Admin Dashboard</h2>
+                </div>
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <h3>Productivity Insights</h3>
+                        <div class="card-content">
+                            <div class="graph-placeholder">Graphs will be here</div>
+                            <div class="table-placeholder">Tables will be here</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Team Performance Trends</h3>
+                        <div class="card-content">
+                            <div class="graph-placeholder">Performance charts</div>
+                            <div class="graph-placeholder">Performance charts</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Weekly Productivity Reports</h3>
+                        <div class="card-content">
+                            <div class="report-placeholder">Report generation area</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notifications Section -->
+            <section id="notifications" class="dashboard-section">
+                <h2>Notifications</h2>
+                <div class="notification-card">
+                    <h3>Productivity Alerts</h3>
+                    <p>Alert for low performance employees</p>
+                </div>
+                <div class="notification-card">
+                    <h3>Deadline Reminders</h3>
+                    <p>Reminder for overdue tasks</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const profileIcon = document.getElementById('profile-icon');
+    const profileMenu = document.getElementById('profile-menu');
+    const profileModal = document.getElementById('profile-modal');
+    const closeBtn = document.getElementById('close-btn');
+    const profileBtn = document.getElementById('profile-btn');
+
+    // Toggle profile menu visibility
+    profileIcon.addEventListener('click', function () {
+        profileMenu.classList.toggle('active');
+    });
+
+    // Open profile update modal when the 'Profile' button is clicked
+    profileBtn.addEventListener('click', function () {
+        profileModal.style.display = 'block';
+        profileMenu.classList.toggle('active');
+    });
+
+    // Close modal when the close button is clicked
+    closeBtn.addEventListener('click', function () {
+        profileModal.style.display = 'none';
+    });
+
+    // Close modal if clicked outside the modal
+    window.addEventListener('click', function (event) {
+        if (event.target === profileModal) {
+            profileModal.style.display = 'none';
+        }
+    });
+</script>

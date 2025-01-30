@@ -1,0 +1,11 @@
+
+<% if (!tasks || tasks.length === 0) { %>
+    <div class="timeline-placeholder" style="width: 100%;">Tasks will appear here</div>
+<% } else { %>
+    <% tasks.forEach(task => { %>
+        <div style="padding: 10px; border-radius: 10px; background-color: rgb(236, 235, 235); width: 250px; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
+            <h2 style="margin-bottom: 10px;"><%= task.title %></h2>
+            <a href="#" style="color: rgb(0, 140, 255); text-decoration: none; padding: 0;">Show more..</a>
+        </div>
+    <% }); %>
+<% } %>
