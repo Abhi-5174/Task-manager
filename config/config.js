@@ -4,7 +4,7 @@ require('dotenv').config();
 // Configuration settings
 const config = {
   // MongoDB URI for connecting to the database
-  mongoURI: process.env.MONGO_URI || 'mongodb+srv://abckewat:abckewat@123@myapp.x6gjr.mongodb.net/',
+  mongoURI: process.env.MONGO_URI || 'mongodb+srv://abckewat:abckewat@123@myapp.x6gjr.mongodb.net/task-productivity',
 
   // JWT secret for generating tokens
   jwtSecret: process.env.JWT_SECRET,
